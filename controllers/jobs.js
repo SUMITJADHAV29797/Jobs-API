@@ -1,4 +1,5 @@
 const Job = require("../models/Job")
+const User = require("../models/User")
 const { StatusCodes } = require("http-status-codes")
 const { BadRequestError, NotFoundError } = require("../errors")
 
@@ -25,7 +26,12 @@ const getJob = async (req, res) => {
 const createJob = async (req, res) => {
     req.body.createdBy = req.user.userId
     const job = await Job.create(req.body)
-    res.status(StatusCodes.CREATED).json({ job })
+    res.status(StatusCodes.CREATED).json({ 
+        company: job.company,
+        position: job.position,
+        createdBy: job.createdBy,
+        status: job.status,
+     })
 }
 
 const updateJob = async (req, res) => {

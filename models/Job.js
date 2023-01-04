@@ -1,4 +1,4 @@
-
+const User = require("./User")
 const mongoose = require("mongoose")
 
 const JobSchema = new mongoose.Schema({
@@ -19,9 +19,9 @@ const JobSchema = new mongoose.Schema({
     },
     createdBy: {
         type: mongoose.Types.ObjectId,
-        ref: "user",
+        ref: User,
         required: [true, "please provide user"],
     }
-},{timestamps: true})
+})
 
 module.exports = mongoose.model("job", JobSchema)

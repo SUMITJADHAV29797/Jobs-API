@@ -7,12 +7,12 @@ const auth = async(req, res, next) => {
     if(!authHeader || !authHeader.startsWith("Bearer")) {
         throw new UnauthenticatedError("Authentication Invalid")
     }
-    const token = authHeader.spliy(" ")[1]
+    const token = authHeader.split(" ")[1]
     try {
-        const payload  = jwt.verify(token, process.env.JWT_SECRET)
-        const user = User.findById(payload.id).select('-password')
-        req. user = user
-        req.user = {userId: payload.userId, name: payload.name}
+        const payload  =  jwt.verify(token, process.env.JWT_SECRET)
+        const user = User.findById(payload.userID).select('-password')
+        req.user = user
+        req.user = {userId: payload.userID, name: payload.name}
         next()
     } catch (error) {
         throw new UnauthenticatedError("Authentication Invalid")

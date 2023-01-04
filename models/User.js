@@ -24,12 +24,12 @@ const UserSchema = new mongoose. Schema ({
 })
 
 UserSchema.pre("save", async function(){
-    const salt = await bcrypt.gensalt(10);
+    const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt)
 })
 
 UserSchema.methods.createJWT = function(){
-    return jwt.sign({userID:user._id, name:user.name},process.env.JWT_SECRET,{expiresIn: process.env.JWT_LIFETIME ,})
+    return jwt.sign({userID:this._id, name:this.name},process.env.JWT_SECRET,{expiresIn: process.env.JWT_LIFETIME ,})
 }
 
 UserSchema.methods.comparePassword = async function(candidatePassword){

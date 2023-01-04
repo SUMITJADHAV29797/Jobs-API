@@ -1,21 +1,21 @@
-###Jobs-API - 
+### Jobs-API - 
 
 This is an example of jobs API backend application
 
-####Install - 
+#### Install - 
 ````
 git clone https://github.com/SUMITJADHAV29797/Jobs-API.git
 ````
 ````
 cd Jobs-API/
 ````
-####Run the app -
+#### Run the app -
 ````
 npm start
 ````
-####API - 
+#### API - 
 
-#####/auth/register - 
+##### /auth/register - 
 
 Post request : create a new user
 
@@ -33,7 +33,7 @@ Sample Response :
     }
 }
 ````
-#####/auth/login
+##### /auth/login
 
 Post request : verifies email and password
 
@@ -50,7 +50,7 @@ Sample Response :
     }
 }
 ````
-#####/jobs
+##### /jobs
 
 Post request : Creates a job
 
@@ -67,7 +67,7 @@ Sample Response :
     "status": "pending"
 }
 ````
-#####/jobs
+##### /jobs
 
 Get request : gives a list of all jobs created by a user and total number of jobs
 
@@ -116,7 +116,7 @@ Sample Response :
     "count": 4
 }
 ````
-#####/jobs/jobId
+##### /jobs/jobId
 
 Get request : gives a single job
 
@@ -137,7 +137,7 @@ Sample Response :
     }
 }
 ````
-#####/jobs/jobId
+##### /jobs/jobId
 
 Patch request : updates a job data
 
@@ -147,7 +147,7 @@ http://localhost:3000/ap/v1/jobs/63b557f9e1d05b7aaf872c39
 ````
 Sample Response :
 
-######Before sending patch request :
+###### Before sending patch request :
 ````
 {
     "job": {
@@ -161,7 +161,7 @@ Sample Response :
 }
 ````
 
-######After sending patch request :
+###### After sending patch request :
 ````
 {
     "job": {
@@ -174,7 +174,7 @@ Sample Response :
     }
 }
 ````
-#####/jobs/jobId
+##### /jobs/jobId
 
 Delete request : Deletes a job
 

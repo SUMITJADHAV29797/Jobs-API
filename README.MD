@@ -15,7 +15,8 @@ npm start
 ````
 ## API - 
 
-### /auth/register - 
+### Register User -
+### /auth/register  
 
 Post request : create a new user
 

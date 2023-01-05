@@ -4,9 +4,7 @@ This is an example of jobs API backend application
 
 ## Live Website Link - 
 
-````
 https://jobs-api-y0au.onrender.com/
-````
 
 ## Install - 
 ````

@@ -77,7 +77,7 @@ Get request : gives a list of all jobs created by a user and total number of job
 
 Example : 
 ````
-http://localhost:3000/ap/v1/jobs
+http://localhost:3000/api/v1/jobs
 ````
 Sample Response :
 ````

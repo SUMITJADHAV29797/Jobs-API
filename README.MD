@@ -25,7 +25,7 @@ Post request : create a new user
 
 Example :
 ````
-http://localhost:3000/ap/v1/auth/register
+http://localhost:3000/api/v1/auth/register
 ````
 Sample Response : 
 ````
@@ -43,7 +43,7 @@ Post request : verifies email and password
 
 Example :
 ````
-http://localhost:3000/ap/v1/auth/login
+http://localhost:3000/api/v1/auth/login
 ````
 Sample Response :
 ````
@@ -60,7 +60,7 @@ Post request : Creates a job
 
 Example : 
 ````
-http://localhost:3000/ap/v1/jobs
+http://localhost:3000/api/v1/jobs
 ````
 Sample Response :
 ````
@@ -126,7 +126,7 @@ Get request : gives a single job
 
 Example :
 ````
- http://localhost:3000/ap/v1/jobs/63b557f9e1d05b7aaf872c39
+ http://localhost:3000/api/v1/jobs/63b557f9e1d05b7aaf872c39
 ````
 Sample Response :
 ````
@@ -147,7 +147,7 @@ Patch request : updates a job data
 
 Example : 
 ````
-http://localhost:3000/ap/v1/jobs/63b557f9e1d05b7aaf872c39
+http://localhost:3000/api/v1/jobs/63b557f9e1d05b7aaf872c39
 ````
 Sample Response :
 
@@ -184,7 +184,7 @@ Delete request : Deletes a job
 
 Example : 
 ````
-http://localhost:3000/ap/v1/jobs/63b557f9e1d05b7aaf872c39
+http://localhost:3000/api/v1/jobs/63b557f9e1d05b7aaf872c39
 ````
 Sample Response :
 ````
